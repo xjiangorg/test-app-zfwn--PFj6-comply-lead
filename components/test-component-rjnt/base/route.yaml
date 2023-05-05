@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: test-component-rjnt
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: test-component-rjnt
+    app.kubernetes.io/part-of: test-app-zfwn
+  name: test-component-rjnt
+  namespace: build-e2e-ohiy-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: test-component-rjnt
+    weight: null
+status: {}
