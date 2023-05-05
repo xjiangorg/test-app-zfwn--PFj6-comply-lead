@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: test-component-rjnt
+  namespace: build-e2e-ohiy-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio-qe/test-images@sha256:c76596b6663b8face37ea7b793ada87dc0d1db84e2fb0851dc6392c191013266
+        name: my-python
+        resources: {}
+status: {}
